@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/darrenneethling/static/css/main.c76b1c15.css",
+    "main.js": "/darrenneethling/static/js/main.7e301a8f.js",
+    "static/js/453.dfd44d64.chunk.js": "/darrenneethling/static/js/453.dfd44d64.chunk.js",
+    "index.html": "/darrenneethling/index.html",
+    "main.c76b1c15.css.map": "/darrenneethling/static/css/main.c76b1c15.css.map",
+    "main.7e301a8f.js.map": "/darrenneethling/static/js/main.7e301a8f.js.map",
+    "453.dfd44d64.chunk.js.map": "/darrenneethling/static/js/453.dfd44d64.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c76b1c15.css",
+    "static/js/main.7e301a8f.js"
+  ]
+}
