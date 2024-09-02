@@ -1,5 +1,3 @@
-// src/components/CV.js
-
 import React from 'react';
 import { FaBriefcase, FaGraduationCap, FaTools, FaCertificate, FaLanguage, FaUsers, FaUser } from 'react-icons/fa';
 import CVData from './cvData';
@@ -9,22 +7,22 @@ const CV = () => {
   return (
     <div className="cv-container">
       <header className="cv-header">
-        <img src={CVData.photo} alt={CVData.name} className="cv-photo" />
+        <img src={`${process.env.PUBLIC_URL}${CVData.photo}`} alt={CVData.name} className="cv-photo" />
         <h1 className="cv-name">{CVData.name}</h1>
         <p className="cv-title">{CVData.title}</p>
         <div className="cv-contact">
-          <p> 
-            <a href={`mailto:${CVData.contact.email}`} className="cv-contact-link ">
+          <p>
+            <a href={`mailto:${CVData.contact.email}`} className="cv-contact-link">
               {CVData.contact.email}
-            </a> 
-               &nbsp;|&nbsp; 
+            </a>
+            &nbsp;|&nbsp;
             <a href={`tel:${CVData.contact.phone.replace(/[^+\d]/g, '')}`} className="cv-contact-link">
               {CVData.contact.phone}
             </a>
           </p>
-          <p>{CVData.contact.location} | 
+          <p>{CVData.contact.location} |
             <a href={CVData.contact.linkedin} target="_blank" rel="noopener noreferrer" className="cv-contact-link">
-            &nbsp; LinkedIn
+              &nbsp; LinkedIn
             </a>
           </p>
         </div>
@@ -110,7 +108,7 @@ const CV = () => {
           <div className="cv-affiliations">
             {CVData.affiliations.map((affil, index) => (
               <div key={index} className="cv-affiliation">
-                <img src={affil.icon} alt={`${affil.organization} logo`} className="cv-affiliation-icon" />
+                <img src={`${process.env.PUBLIC_URL}${affil.icon}`} alt={`${affil.organization} logo`} className="cv-affiliation-icon" />
                 <div className="cv-affiliation-details">
                   <h3 className="cv-affiliation-role">{affil.role}</h3>
                   <p className="cv-affiliation-organization">{affil.organization}</p>
