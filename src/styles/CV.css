@@ -1,0 +1,177 @@
+/* src/styles/CV.css */
+
+.cv-container {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f2f2f5;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .cv-header {
+    background-color: #000;
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .cv-photo {
+    border-radius: 50%;
+    width: 200px; /* Adjust width for better quality */
+    height: 200px; /* Adjust height accordingly */
+    object-fit: cover; /* Ensures the image fits the container without distortion */
+    border: 5px solid #fff;
+    margin: 0 auto 20px auto; /* Center the image and add margin at the bottom */
+    display: block; /* Ensures image is centered */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3); /* Optional: adds a subtle shadow for depth */
+  }
+  
+  .cv-name {
+    margin: 20px 0 10px;
+    font-size: 2.5rem;
+    font-weight: 600;
+  }
+  
+  .cv-title {
+    font-size: 1.25rem;
+    color: #b0b0b5;
+    margin-bottom: 10px;
+  }
+  
+  .cv-contact p {
+    margin: 5px 0;
+    font-size: 1rem;
+  }
+  
+  .cv-contact a {
+    color: #0a84ff;
+    text-decoration: none;
+  }
+  
+  .cv-main {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  .cv-section {
+    margin-bottom: 60px;
+  }
+  
+  .cv-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    color: #333;
+  }
+  
+  .cv-icon {
+    margin-right: 10px;
+    color: #007aff;
+  }
+  
+  .cv-skills {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .cv-skill {
+    background-color: #f2f2f5;
+    color: #007aff;
+    padding: 8px 12px;
+    margin: 5px;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  
+  .collapsible {
+    margin-bottom: 10px;
+  }
+  
+  .collapsible ul {
+    padding-left: 20px;
+    list-style-type: disc;
+  }
+  
+  .collapsible li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    color: #555;
+  }
+  
+  .collapsible p {
+    font-size: 1.1rem;
+    color: #555;
+    margin: 10px 0;
+  }
+  
+  .collapsible-trigger {
+    font-size: 1.25rem;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .collapsible-trigger:hover {
+    background-color: #e0e0e0;
+    color: #007aff;
+  }
+  
+  .collapsible-trigger-open {
+    background-color: #e0e0e0;
+    color: #007aff;
+  }
+  
+  /* Professional Affiliations Styling */
+  .cv-affiliations {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between affiliations */
+  }
+  
+  .cv-affiliation {
+    background-color: #f9f9f9; /* Light background to distinguish each affiliation */
+    padding: 20px;
+    border-left: 5px solid #007aff; /* Blue accent border to the left */
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+  
+  .cv-affiliation-role {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  
+  .cv-affiliation-organization {
+    font-size: 1.1rem;
+    color: #555;
+  }
+  
+  .cv-affiliation-period {
+    font-size: 1rem;
+    color: #777;
+  }
+  
+  .cv-affiliation-url a {
+    font-size: 0.9rem;
+    color: #007aff;
+    text-decoration: none;
+    word-break: break-all; /* Ensures long URLs break onto the next line */
+  }
+  
+  .cv-affiliation-url a:hover {
+    text-decoration: underline;
+  }
+  
