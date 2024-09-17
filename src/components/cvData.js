@@ -19,7 +19,7 @@ const CVData = {
   experience: [
     {
       title: "Director of Technology",
-      company: "Copenhagen International School",
+      company: "Copenhagen International School, Denmark",
       period: "August 2022 - Present",
       responsibilities: [
         "Lead digital transformation initiatives, including AI integration, AI Taskforce Chair and comprehensive network overhaul for a 1,200+ user organization.",
@@ -34,7 +34,7 @@ const CVData = {
     },
     {
       title: "Director of IT",
-      company: "International School of Ulm/Neu-Ulm",
+      company: "International School of Ulm/Neu-Ulm, Germany",
       period: "July 2017 - July 2022",
       responsibilities: [
         "Oversaw all aspects of IT operations, including network security, hardware/software management, and cloud services.",
@@ -48,7 +48,7 @@ const CVData = {
     },
     {
       title: "ICT Coordinator",
-      company: "Elkanah House",
+      company: "Elkanah House, South Africa",
       period: "December 2014 - July 2017",
       responsibilities: [
         "Implemented and oversaw a mobile learning initiative, managing a fleet of mobile devices for educational use.",
@@ -60,7 +60,7 @@ const CVData = {
     },
     {
       title: "Head of M-Learning & ICT & Graphics Design and Computer Science Educator",
-      company: "Maragon Private Schools Olympus",
+      company: "Maragon Private Schools Olympus, South Africa",
       period: "December 2013 - December 2014",
       responsibilities: [
         "Spearheaded the implementation and management of a mobile learning initiative, overseeing 300+ mobile devices.",
@@ -73,7 +73,7 @@ const CVData = {
     },
     {
       title: "Lecturer (Part-time) & PGCE Administrative Coordinator",
-      company: "University of Pretoria",
+      company: "University of Pretoria, South Africa",
       period: "December 2012 - December 2014",
       responsibilities: [
         "Delivered lectures in Computer Applications Technology, integrating cutting-edge software and hardware into the curriculum.",
