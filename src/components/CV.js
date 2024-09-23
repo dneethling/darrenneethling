@@ -21,9 +21,15 @@ const CV = () => {
               {CVData.contact.phone}
             </a>
           </p>
-          <p>{CVData.contact.location} |
+          <p>
+            {CVData.contact.location} |
             <a href={CVData.contact.linkedin} target="_blank" rel="noopener noreferrer" className="cv-contact-link">
               &nbsp;LinkedIn
+            </a>
+          </p>
+          <p>
+            <a href="https://open.spotify.com/show/7F5GOZFAHXF93VZbqV6Bzg?si=46d50eed65ee4b20&nd=1&dlsi=ca4863bee51a46a3" target="_blank" rel="noopener noreferrer" className="cv-contact-link">
+              | The Learning Curve Podcast |
             </a>
           </p>
         </div>

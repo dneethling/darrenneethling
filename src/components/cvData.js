@@ -6,7 +6,8 @@ const CVData = {
     email: "darrenneethling@gmail.com",
     phone: "(+45) 50142037",
     location: "Copenhagen, Denmark",
-    linkedin: "https://www.linkedin.com/in/darrenneethling/"
+    linkedin: "https://www.linkedin.com/in/darrenneethling/",
+    Spotify: "The Learning Curve Podcast, https://open.spotify.com/show/7F5GOZFAHXF93VZbqV6Bzg?si=46d50eed65ee4b20&nd=1&dlsi=ca4863bee51a46a3"
   },
 
   profile: {
