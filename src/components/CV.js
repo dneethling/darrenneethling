@@ -2,10 +2,11 @@ import React from 'react';
 import { FaBriefcase, FaGraduationCap, FaTools, FaCertificate, FaLanguage, FaUsers, FaUser } from 'react-icons/fa';
 import CVData from './cvData';
 import '../styles/CV.css';
+import ExportButton from './ExportButton';
 
 const CV = () => {
   return (
-    <div className="cv-container">
+    <div className="cv-container" id="cv-container">
       <header className="cv-header">
         <img src={`${process.env.PUBLIC_URL}${CVData.photo}`} alt={CVData.name} className="cv-photo" />
         <h1 className="cv-name">{CVData.name}</h1>
@@ -22,7 +23,7 @@ const CV = () => {
           </p>
           <p>{CVData.contact.location} |
             <a href={CVData.contact.linkedin} target="_blank" rel="noopener noreferrer" className="cv-contact-link">
-              &nbsp; LinkedIn
+              &nbsp;LinkedIn
             </a>
           </p>
         </div>
@@ -124,6 +125,10 @@ const CV = () => {
           </div>
         </section>
       </main>
+      
+      <footer className="cv-footer">
+        <ExportButton />
+      </footer>
     </div>
   );
 };
