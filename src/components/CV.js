@@ -1,120 +1,71 @@
 import React from 'react';
-import { FaBriefcase, FaGraduationCap, FaTools, FaCertificate, FaLanguage, FaUsers, FaUser, FaRocket, FaProjectDiagram, FaEnvelope, FaLinkedin, FaPodcast } from 'react-icons/fa';
+import { FaBriefcase, FaGraduationCap, FaTools, FaCertificate, FaLanguage, FaUsers, FaUser } from 'react-icons/fa';
 import CVData from './cvData';
 import '../styles/CV.css';
 import ExportButton from './ExportButton';
 
-const SectionHeading = ({ icon, children }) => (
-  <h2 className="section-heading">
-    <span className="section-icon">{icon}</span>
-    {children}
-  </h2>
-);
-
 const CV = () => {
   return (
-    <div className="site-shell" id="cv-container">
-      <header className="hero">
-        <div className="hero-content">
-          <div className="hero-copy">
-            <p className="eyebrow">Technology leadership · AI systems · automation</p>
-            <h1>{CVData.name}</h1>
-            <p className="hero-title">{CVData.title}</p>
-            <p className="hero-tagline">{CVData.tagline}</p>
-
-            <div className="hero-actions">
-              <a href={`mailto:${CVData.contact.email}`} className="button primary-button">
-                <FaEnvelope /> Work with me
-              </a>
-              <a href={CVData.contact.linkedin} target="_blank" rel="noopener noreferrer" className="button secondary-button">
-                <FaLinkedin /> LinkedIn
-              </a>
-              <ExportButton />
-            </div>
-
-            <div className="contact-line">
-              <span>{CVData.contact.location}</span>
-              <span>{CVData.contact.email}</span>
-            </div>
-          </div>
-
-          <div className="hero-card">
-            <img src={`${process.env.PUBLIC_URL}${CVData.photo}`} alt={CVData.name} className="cv-photo" />
-            <div className="stat-grid">
-              {CVData.heroStats.map((stat, index) => (
-                <div className="stat-card" key={index}>
-                  <strong>{stat.value}</strong>
-                  <span>{stat.label}</span>
-                </div>
-              ))}
-            </div>
-          </div>
+    <div className="cv-container" id="cv-container">
+      <header className="cv-header">
+        <img src={`${process.env.PUBLIC_URL}${CVData.photo}`} alt={CVData.name} className="cv-photo" />
+        <h1 className="cv-name">{CVData.name}</h1>
+        <p className="cv-title">{CVData.title}</p>
+        <div className="cv-contact">
+          <p>
+            <a href={`mailto:${CVData.contact.email}`} className="cv-contact-link">
+              {CVData.contact.email}
+            </a>
+            &nbsp;|&nbsp;
+            <a href={`tel:${CVData.contact.phone.replace(/[^+\d]/g, '')}`} className="cv-contact-link">
+              {CVData.contact.phone}
+            </a>
+          </p>
+          <p>
+            {CVData.contact.location} |
+            <a href={CVData.contact.linkedin} target="_blank" rel="noopener noreferrer" className="cv-contact-link">
+              &nbsp;LinkedIn
+            </a>
+          </p>
+          <p>
+            <a href="https://open.spotify.com/show/7F5GOZFAHXF93VZbqV6Bzg?si=46d50eed65ee4b20&nd=1&dlsi=ca4863bee51a46a3" target="_blank" rel="noopener noreferrer" className="cv-contact-link">
+              | The Learning Curve Podcast |
+            </a>
+          </p>
         </div>
       </header>
 
       <main className="cv-main">
-        <section className="cv-section intro-section">
-          <SectionHeading icon={<FaUser />}>Profile</SectionHeading>
-          <div className="profile-grid">
-            <div className="profile-card highlight-card">
-              <h3>Summary</h3>
-              <p>{CVData.profile.summary}</p>
-            </div>
-            <div className="profile-card">
-              <h3>Current direction</h3>
-              <p>{CVData.profile.positioning}</p>
-            </div>
+        <section className="cv-section">
+          <h2><FaUser className="cv-icon" /> Profile</h2>
+          <div className="cv-profile">
+            <h3>Summary</h3>
+            <p>{CVData.profile.summary}</p>
+            <h3>My Journey</h3>
+            <p>{CVData.profile.professional_experience}</p>
           </div>
         </section>
 
         <section className="cv-section">
-          <SectionHeading icon={<FaRocket />}>What I Do</SectionHeading>
-          <div className="value-grid">
-            {CVData.valueProps.map((item, index) => (
-              <article className="value-card" key={index}>
-                <h3>{item.title}</h3>
-                <p>{item.description}</p>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section className="cv-section">
-          <SectionHeading icon={<FaProjectDiagram />}>Selected Projects</SectionHeading>
-          <div className="project-grid">
-            {CVData.projects.map((project, index) => (
-              <article className="project-card" key={index}>
-                <p className="project-type">{project.type}</p>
-                <h3>{project.name}</h3>
-                <p>{project.description}</p>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section className="cv-section">
-          <SectionHeading icon={<FaBriefcase />}>Experience</SectionHeading>
-          <div className="timeline">
+          <h2><FaBriefcase className="cv-icon" /> Professional Experience</h2>
+          <div className="cv-experience">
             {CVData.experience.map((job, index) => (
-              <article key={index} className="timeline-item">
-                <div className="timeline-marker" />
-                <div className="timeline-content">
-                  <h3>{job.title}</h3>
-                  <p className="company">{job.company}</p>
-                  <p className="period">{job.period}</p>
-                  <ul>
-                    {job.responsibilities.map((responsibility, idx) => (
-                      <li key={idx}>{responsibility}</li>
-                    ))}
-                  </ul>
-                </div>
-              </article>
+              <div key={index} className="cv-experience-item">
+                <h3 className="cv-experience-title">{job.title}</h3>
+                <p className="cv-experience-company">{job.company}</p>
+                <p className="cv-experience-period">{job.period}</p>
+                <ul className="cv-experience-responsibilities">
+                  {job.responsibilities.map((responsibility, idx) => (
+                    <li key={idx}>{responsibility}</li>
+                  ))}
+                </ul>
+              </div>
             ))}
           </div>
         </section>
 
         <section className="cv-section">
-          <SectionHeading icon={<FaTools />}>Skills</SectionHeading>
+          <h2><FaTools className="cv-icon" /> Skills</h2>
           <div className="cv-skills">
             {CVData.skills.map((skill, index) => (
               <span key={index} className="cv-skill">{skill}</span>
@@ -122,67 +73,67 @@ const CV = () => {
           </div>
         </section>
 
-        <section className="cv-section two-column-section">
-          <div>
-            <SectionHeading icon={<FaGraduationCap />}>Education</SectionHeading>
-            <div className="compact-list">
-              {CVData.education.map((edu, index) => (
-                <article key={index}>
-                  <h3>{edu.degree}</h3>
-                  <p>{edu.institution} · {edu.year}</p>
-                </article>
-              ))}
-            </div>
-          </div>
-
-          <div>
-            <SectionHeading icon={<FaCertificate />}>Certifications</SectionHeading>
-            <div className="cv-skills compact-skills">
-              {CVData.certifications.map((certification, index) => (
-                <span key={index} className="cv-skill">{certification}</span>
-              ))}
-            </div>
+        <section className="cv-section">
+          <h2><FaGraduationCap className="cv-icon" /> Education</h2>
+          <div className="cv-education">
+            {CVData.education.map((edu, index) => (
+              <div key={index} className="cv-education-item">
+                <h3 className="cv-education-degree">{edu.degree}</h3>
+                <p className="cv-education-institution">{edu.institution}</p>
+                <p className="cv-education-year">{edu.year}</p>
+              </div>
+            ))}
           </div>
         </section>
 
-        <section className="cv-section two-column-section">
-          <div>
-            <SectionHeading icon={<FaLanguage />}>Languages</SectionHeading>
-            <div className="compact-list">
-              {CVData.languages.map((language, index) => (
-                <article key={index}>
-                  <h3>{language.language}</h3>
-                  <p>{language.proficiency}</p>
-                </article>
+        <section className="cv-section">
+          <h2><FaCertificate className="cv-icon" /> Certifications</h2>
+          <div className="cv-certifications">
+            <ul>
+              {CVData.certifications.map((certification, index) => (
+                <li key={index} className="cv-certification-item">{certification}</li>
               ))}
-            </div>
+            </ul>
           </div>
+        </section>
 
-          <div>
-            <SectionHeading icon={<FaUsers />}>Affiliations</SectionHeading>
-            <div className="affiliation-list">
-              {CVData.affiliations.map((affil, index) => (
-                <article key={index} className="affiliation-card">
-                  <img src={`${process.env.PUBLIC_URL}${affil.icon}`} alt={`${affil.organization} logo`} />
-                  <div>
-                    <h3>{affil.role}</h3>
-                    <p>{affil.organization}</p>
-                    <a href={affil.url} target="_blank" rel="noopener noreferrer">More information</a>
-                  </div>
-                </article>
+        <section className="cv-section">
+          <h2><FaLanguage className="cv-icon" /> Languages</h2>
+          <div className="cv-languages">
+            <ul>
+              {CVData.languages.map((language, index) => (
+                <li key={index} className="cv-language-item">
+                  <strong>{language.language}:</strong> {language.proficiency}
+                </li>
               ))}
-            </div>
+            </ul>
+          </div>
+        </section>
+
+        <section className="cv-section">
+          <h2><FaUsers className="cv-icon" /> Professional Affiliations</h2>
+          <div className="cv-affiliations">
+            {CVData.affiliations.map((affil, index) => (
+              <div key={index} className="cv-affiliation">
+                <img src={`${process.env.PUBLIC_URL}${affil.icon}`} alt={`${affil.organization} logo`} className="cv-affiliation-icon" />
+                <div className="cv-affiliation-details">
+                  <h3 className="cv-affiliation-role">{affil.role}</h3>
+                  <p className="cv-affiliation-organization">{affil.organization}</p>
+                  <p className="cv-affiliation-period">{affil.period}</p>
+                  <p className="cv-affiliation-url">
+                    <a href={affil.url} target="_blank" rel="noopener noreferrer">
+                      Click here for more information
+                    </a>
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
         </section>
       </main>
-
-      <footer className="site-footer">
-        <p>Let’s build practical AI, automation and technology systems that actually move the work forward.</p>
-        <div className="footer-links">
-          <a href={`mailto:${CVData.contact.email}`}><FaEnvelope /> Email</a>
-          <a href={CVData.contact.linkedin} target="_blank" rel="noopener noreferrer"><FaLinkedin /> LinkedIn</a>
-          <a href={CVData.contact.podcast} target="_blank" rel="noopener noreferrer"><FaPodcast /> Podcast</a>
-        </div>
+      
+      <footer className="cv-footer">
+        <ExportButton />
       </footer>
     </div>
   );
