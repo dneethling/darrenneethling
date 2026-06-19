@@ -182,9 +182,29 @@ const CVData = {
       tech: "Next.js, Clerk, Supabase"
     },
     {
-      name: "Skills Intelligence Platform",
-      description: "AI integration platform for an international education group, delivering skills intelligence, certification tracking, and AI governance.",
+      name: "Digital Learning Coach Platform",
+      description: "Digital-literacy coaching platform for an international education group — tracking Digital Learning Coach certification, edtech upskilling impact, and AI governance.",
       tech: "JavaScript, Firebase"
+    },
+    {
+      name: "dc-comply",
+      description: "Compliance-management platform that streamlines security and regulatory compliance — automating evidence collection, control tracking, and audit readiness.",
+      tech: "TypeScript, React"
+    },
+    {
+      name: "Daisy Chain Brain",
+      description: "AI-powered internal operations hub unifying clients, projects, tasks, contracts, and meeting intelligence across the consultancy's business units.",
+      tech: "Notion, AI Automation"
+    },
+    {
+      name: "Nurse Station App",
+      description: "Digital health-office / nurse-station application for an international school, streamlining student health visits, records, and reporting (in development).",
+      tech: "Web Application"
+    },
+    {
+      name: "Brand Client Portal",
+      description: "Bespoke web portal for a global fashion brand, centralising client assets, project workflows, and content operations.",
+      tech: "TypeScript, Web"
     }
   ],
   education: [
