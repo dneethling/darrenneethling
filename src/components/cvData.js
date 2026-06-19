@@ -27,6 +27,7 @@ const CVData = {
         "Spearhead digital transformation and secure-infrastructure projects for educational institutions and enterprise organisations across South Africa, the Middle East, the United States, and the United Kingdom (from Riyadh to Cape Town).",
         "Develop and deliver services in automation, system integration, AI literacy, applied AI solutions, IT infrastructure, CMMC / U.S. Department of Defense cybersecurity compliance, and fractional technology leadership, turning AI hype into measurable, real-world impact for clients across retail, beverage, financial services, and education.",
         "Hold fractional and portfolio leadership roles across client organisations, including Chief Technology Officer at Search Kings Africa and Bay Capital Family Office, and Head of AI at Morby.",
+        "Serve as Google Workspace Administrator and cybersecurity auditor for an international school in Australia, hardening tenant security and compliance, and delivering administrator training.",
         "Build cross-sector partnerships that bridge education and corporate innovation, establishing Daisy Chain as a trusted strategic technology partner in the AI era."
       ]
     },
@@ -147,7 +148,44 @@ const CVData = {
     "Emerging Technology Integration",
     "Educational Leadership",
     "Strategic Planning & Futures Thinking",
-    "Business Development & Client Management"
+    "Business Development & Client Management",
+    "Google Workspace Administration",
+    "Cybersecurity Auditing",
+    "Full-Stack Software Development"
+  ],
+  projects: [
+    {
+      name: "Weavy Studio",
+      description: "Node-based AI image-generation platform with a visual canvas for composing multi-step generative pipelines, powered by Google Gemini and Imagen.",
+      tech: "TypeScript, React, Gemini, Imagen",
+      url: "https://github.com/dneethling/weavy-studio"
+    },
+    {
+      name: "Claud-o-Meter",
+      description: "Native macOS menu-bar app that surfaces live Claude.ai usage — session and weekly limits with reset timers — requiring no browser extensions or configuration.",
+      tech: "Swift, macOS",
+      url: "https://github.com/dneethling/claud-o-meter"
+    },
+    {
+      name: "Stride AI",
+      description: "AI-powered running coach for iOS and watchOS, integrating HealthKit and Core Data with OpenAI to generate adaptive, personalised training guidance.",
+      tech: "Swift, HealthKit, Core Data, OpenAI"
+    },
+    {
+      name: "Brief Analyzer",
+      description: "AI-powered creative-brief analyzer with multi-LLM support, extracting structure, gaps, and strategic insight from marketing briefs.",
+      tech: "TypeScript, Multi-LLM"
+    },
+    {
+      name: "Sponsorship Pitch Generator",
+      description: "AI sponsorship-proposal generator for a sports and padel brand, producing tailored partnership decks from structured inputs.",
+      tech: "Next.js, Clerk, Supabase"
+    },
+    {
+      name: "Skills Intelligence Platform",
+      description: "AI integration platform for an international education group, delivering skills intelligence, certification tracking, and AI governance.",
+      tech: "JavaScript, Firebase"
+    }
   ],
   education: [
     {

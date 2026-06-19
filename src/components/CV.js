@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaBriefcase, FaGraduationCap, FaTools, FaCertificate, FaLanguage, FaUsers, FaUser } from 'react-icons/fa';
+import { FaBriefcase, FaGraduationCap, FaTools, FaCertificate, FaLanguage, FaUsers, FaUser, FaLaptopCode } from 'react-icons/fa';
 import CVData from './cvData';
 import '../styles/CV.css';
 import ExportButton from './ExportButton';
@@ -69,6 +69,25 @@ const CV = () => {
           <div className="cv-skills">
             {CVData.skills.map((skill, index) => (
               <span key={index} className="cv-skill">{skill}</span>
+            ))}
+          </div>
+        </section>
+
+        <section className="cv-section">
+          <h2><FaLaptopCode className="cv-icon" /> Projects</h2>
+          <div className="cv-projects">
+            {CVData.projects.map((project, index) => (
+              <div key={index} className="cv-project-item">
+                <h3 className="cv-project-name">
+                  {project.url ? (
+                    <a href={project.url} target="_blank" rel="noopener noreferrer">{project.name}</a>
+                  ) : (
+                    project.name
+                  )}
+                </h3>
+                <p className="cv-project-description">{project.description}</p>
+                <p className="cv-project-tech">{project.tech}</p>
+              </div>
             ))}
           </div>
         </section>
