@@ -204,7 +204,7 @@ const CVData = {
     {
       name: "Brand Client Portal",
       description: "Bespoke web portal for a global fashion brand, centralising client assets, project workflows, and content operations.",
-      tech: "TypeScript, Web"
+      tech: "TypeScript, React"
     }
   ],
   education: [
