@@ -1,13 +1,13 @@
 const CVData = {
   name: "Darren Neethling",
-  title: "CEO, Daisy Chain | Fractional CIO | Tech Strategy & AI Integration | EDUtech Advisory Board | TRC Leadership | EU Digital Education Hub | Human Intelligence Movement Founding Member | Co-host of The Learning Curve Podcast",
+  title: "CEO, Daisy Chain | Fractional CIO | Tech Strategy & AI Integration | EDUtech Advisory Board | TRC Leadership | EU Digital Education Hub | Human Intelligence Movement Founding Member | Co-host of The Dark Side of The Moon",
   photo: "/profile.JPEG", // Replace with your actual photo URL
   contact: {
     email: "darrenneethling@gmail.com",
     phone: "(+45) 50142037",
     location: "Cape Town, South Africa",
     linkedin: "https://www.linkedin.com/in/darrenneethling/",
-    Spotify: "The Learning Curve Podcast, https://open.spotify.com/show/7F5GOZFAHXF93VZbqV6Bzg?si=46d50eed65ee4b20&nd=1&dlsi=ca4863bee51a46a3"
+    Spotify: "The Dark Side of The Moon, https://open.spotify.com/show/1j3Gh7zsEolroKq20W7xcn?si=fIMzMIhYQTWhsgIFrCpSPA"
   },
 
   profile: {
@@ -47,7 +47,7 @@ const CVData = {
         "Implement and manage a ticketing system for streamlined IT support.",
         "Lead network overhaul and printer deployment projects across the school.",
         "Engage with parents, board, and community stakeholders on tech-related initiatives.",
-        "Co-host of The Learning Curve Podcast"
+        "Co-host of The Dark Side of The Moon"
       ]
     },
     {
