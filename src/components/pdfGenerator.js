@@ -184,10 +184,11 @@ export default async function generateCVPdf(data) {
     { text: c.location },
   ].filter((s) => s.text), contact1Y, 8, COLORS.heroText);
 
+  const podcastName = (c.Spotify && c.Spotify.split(', ')[0]) || 'Podcast';
   const podcastUrl = (c.Spotify && c.Spotify.split(', ')[1]) || undefined;
   centeredRow([
     { text: 'LinkedIn', link: c.linkedin, color: COLORS.accent2 },
-    { text: 'The Learning Curve Podcast', link: podcastUrl, color: COLORS.accent2 },
+    { text: podcastName, link: podcastUrl, color: COLORS.accent2 },
   ].filter((s) => s.text), contact2Y, 8, COLORS.accent2);
 
   y = heroH + 9;

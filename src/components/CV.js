@@ -28,8 +28,8 @@ const CV = () => {
             </a>
           </p>
           <p>
-            <a href="https://open.spotify.com/show/7F5GOZFAHXF93VZbqV6Bzg?si=46d50eed65ee4b20&nd=1&dlsi=ca4863bee51a46a3" target="_blank" rel="noopener noreferrer" className="cv-contact-link">
-              | The Learning Curve Podcast |
+            <a href="https://open.spotify.com/show/1j3Gh7zsEolroKq20W7xcn?si=fIMzMIhYQTWhsgIFrCpSPA" target="_blank" rel="noopener noreferrer" className="cv-contact-link">
+              | The Dark Side of The Moon |
             </a>
           </p>
         </div>
