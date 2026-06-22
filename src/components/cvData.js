@@ -4,7 +4,7 @@ const CVData = {
   photo: "/profile.JPEG", // Replace with your actual photo URL
   contact: {
     email: "darrenneethling@gmail.com",
-    phone: "(+45) 50142037",
+    phone: "(+27) 82 410 7592",
     location: "Cape Town, South Africa",
     linkedin: "https://www.linkedin.com/in/darrenneethling/",
     Spotify: "The Dark Side of The Moon, https://open.spotify.com/show/1j3Gh7zsEolroKq20W7xcn?si=fIMzMIhYQTWhsgIFrCpSPA"
